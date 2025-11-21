@@ -1,0 +1,17 @@
+services:
+  api:
+    build:
+      context: ../../
+      dockerfile: src/FormSubmissions.API/Dockerfile
+    ports:
+      - "5000:8080"
+  web:
+    build:
+      context: ../../client/form-submissions-web
+      dockerfile: Dockerfile
+      args:
+        VITE_API_BASE_URL: http://localhost:5000
+    ports:
+      - "5173:80"
+    depends_on:
+      - api

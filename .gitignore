@@ -52,3 +52,6 @@ CodeCoverage/
 *.VisualState.xml
 TestResult.xml
 nunit-*.xml
+client/form-submissions-web/node_modules/.bin
+client/form-submissions-web/node_modules
+.vs
